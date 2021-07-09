@@ -11,6 +11,7 @@ pipeline {
         stage('Develop') {
             steps {
                 echo 'I am in Develop'
+                git branch: 'main', credentialsId: 'nlelidisGitCredentials', url: 'https://github.com/nlelidis/JenkinsDemo'
                 sleep 5
             }
         }
